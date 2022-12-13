@@ -1,0 +1,386 @@
+.footer {
+  background-color: black;
+
+  .container {
+    height: 594px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .mobile-line {
+      display: none;
+      margin-top: 5px;
+      width: 100%;
+      border: none;
+      height: 1px;
+      background: #414141;
+    }
+    .footerForm {
+      position: absolute;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      height: 100%;
+      width: 570px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      form {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        h2 {
+          font-weight: 400;
+          font-size: 48px;
+          line-height: 59px;
+          color: #cacaca;
+          margin-bottom: 25px;
+        }
+        input {
+          background: #414141;
+          border-radius: 16px;
+          padding: 14px 24px;
+          height: 60px;
+          margin-bottom: 25px;
+          outline: none;
+          border: none;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 32px;
+          color: #cacaca;
+          &::placeholder {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 32px;
+            color: #cacaca;
+          }
+        }
+        textarea {
+          background: #414141;
+          border-radius: 16px;
+          padding: 14px 24px;
+          height: 150px;
+          line-height: 32px;
+          color: #cacaca;
+          margin-bottom: 32px;
+          outline: none;
+          border: none;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 32px;
+          color: #cacaca;
+          &::placeholder {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 32px;
+            color: #cacaca;
+          }
+        }
+        .getForm {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          button {
+            width: 269px;
+            height: 58px;
+            background: #ff9900;
+            border-radius: 16px;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            color: #ffffff;
+            transition-duration: 0.25s;
+            &:hover {
+              background: #ffb84d;
+            }
+            &:active {
+              background: #e1670e;
+            }
+          }
+
+          label {
+            display: flex;
+            width: 280px;
+            align-items: center;
+            justify-content: space-between;
+            p {
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 32px;
+              color: #cacaca;
+            }
+            .checkbox {
+              display: none;
+              margin: 0;
+            }
+            .fake::before {
+              display: block;
+              width: 10px;
+              height: 10px;
+              background: url(../img/svg/check.svg) 100% 100% no-repeat;
+              background-size: cover;
+              content: '';
+              opacity: 0;
+              transition-duration: 0.3s;
+            }
+            .checkbox:checked + .fake::before {
+              opacity: 1;
+            }
+            .fake {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 14px;
+              height: 14px;
+              border-radius: 5px;
+              border: 1px solid #cacaca;
+              border-radius: 2px;
+              // &::before {
+              //   // position: absolute;
+              //   background: url(../img/svg/check.svg) 100% 100% no-repeat;
+              //   content: ' ';
+              // }
+            }
+          }
+        }
+      }
+    }
+    .rightFooter {
+      width: 363px;
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
+        color: #cacaca;
+      }
+    }
+
+    .leftFooter {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      .contact {
+        display: flex;
+        width: 145px;
+        justify-content: space-between;
+      }
+
+      .navFooter {
+        height: 344px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .footerLinks {
+          height: 252px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          li {
+            list-style-type: none;
+            a {
+              font-weight: 600;
+              font-size: 18px;
+              line-height: 36px;
+              color: #cacaca;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .footer {
+    .container {
+      .footerForm {
+        position: static;
+        transform: none;
+        width: 541px;
+        padding-top: 0;
+        padding-bottom: 0;
+        form {
+          textarea {
+            height: 541px;
+          }
+          .getForm {
+            button {
+              width: 241px;
+              height: 58px;
+            }
+            label {
+              p {
+                font-size: 16px;
+                line-height: 32px;
+              }
+            }
+          }
+        }
+      }
+      .rightFooter {
+        position: absolute;
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .footer {
+    .container {
+      height: 792px;
+      padding: 50px;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      justify-content: flex-start;
+      .footerForm {
+        width: 100%;
+        form {
+          textarea {
+            height: 150px;
+          }
+          .getForm {
+            button {
+              margin-right: 5px;
+              width: 241px;
+              height: 58px;
+            }
+            label {
+              p {
+                width: 300px;
+                font-size: 16px;
+                line-height: 32px;
+              }
+            }
+          }
+        }
+      }
+      .rightFooter {
+        position: absolute;
+        display: none;
+      }
+      .leftFooter {
+        justify-content: flex-end;
+        .navFooter {
+          margin-bottom: 16px;
+          height: auto;
+          display: block;
+          .footerLinks {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    .container {
+      padding: 33px 15px 31px 15px;
+      height: 672px;
+      .mobile-line {
+        display: inline;
+      }
+      .footerForm {
+        width: 100%;
+        form {
+          h2 {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+          }
+          input {
+            width: 100%;
+            height: 60px;
+            border-radius: 16px;
+            font-size: 14px;
+            line-height: 32px;
+            font-weight: 400;
+            &::placeholder {
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 32px;
+            }
+          }
+          textarea {
+            width: 100%;
+            height: 150px;
+            border-radius: 16px;
+            font-size: 14px;
+            line-height: 32px;
+            font-weight: 400;
+            &::placeholder {
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 32px;
+            }
+          }
+          .getForm {
+            flex-direction: column;
+            width: 100%;
+            height: 83px;
+            justify-content: space-between;
+            align-items: center;
+            button {
+              margin-right: 0px;
+              border-radius: 8px;
+              width: 180px;
+              height: 39px;
+              font-size: 12px;
+              line-height: 15px;
+            }
+            label {
+              position: relative;
+              justify-content: center;
+              .fake {
+                width: 14px;
+                height: 14px;
+                margin-right: 5px;
+              }
+              p {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 32px;
+              }
+            }
+          }
+        }
+      }
+      .leftFooter {
+        width: 100%;
+        align-items: center;
+        .contact {
+          display: grid;
+          width: 97px;
+          grid-template-columns: 1fr 1fr;
+          gap: 16px;
+          a {
+            img {
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
+        .navFooter {
+          img {
+            width: 131px;
+            height: 42px;
+          }
+        }
+      }
+    }
+  }
+}

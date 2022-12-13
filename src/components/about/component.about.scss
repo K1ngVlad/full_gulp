@@ -1,0 +1,376 @@
+.about {
+  margin-top: 50px;
+  .container {
+    min-height: 943px;
+    .aboutTitle {
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 59px;
+    }
+    .aboutText {
+      margin-top: 20px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 32px;
+    }
+    .aboutContent {
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      min-height: 622px;
+      .mobileText {
+        display: none;
+      }
+      .aboutBlock {
+        position: relative;
+        background: url('../img/about-img.png') 100% 100% no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 32px;
+        .aboutBot {
+          position: absolute;
+          padding: 50px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          bottom: 0;
+          width: 100%;
+          height: 31.5%;
+          background: rgba(0, 0, 0, 0.5);
+          border-radius: 32px;
+          p {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 32px;
+            color: #ffffff;
+            width: 400px;
+          }
+          button {
+            width: 175px;
+            height: 60px;
+            border: 3px solid #ff9900;
+            border-radius: 16px;
+            background: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            transition-duration: 0.25s;
+            color: #ffffff;
+            &:hover {
+              border: 3px solid #ff9900;
+              background: #ff9900;
+              border: 3px solid #ff9900;
+            }
+            &:active {
+              border: 3px solid #e1670e;
+              background: #e1670e;
+            }
+          }
+        }
+      }
+      .aboutRight {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        gap: 32px;
+        .aboutItem {
+          border: 1px solid #cacaca;
+          border-radius: 32px;
+          padding: 65px 120px 65px 60px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          h3 {
+            margin-left: 10px;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+          }
+          p {
+            margin-left: 10px;
+            max-width: 450px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 32px;
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .about {
+    .container {
+      min-height: 800px;
+      .aboutContent {
+        .aboutRight {
+          .aboutItem {
+            padding: 35px 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .about {
+    margin-top: 40px;
+    .container {
+      min-height: 1648px;
+      .aboutContent {
+        margin-top: 60px;
+        display: block;
+        height: auto;
+        .aboutBlock {
+          background: url('../img/about-img-1024.png') 100% 100% no-repeat;
+          background-size: cover;
+          background-position: center;
+          min-height: 640px;
+          .aboutBot {
+            p {
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 32px;
+              width: 454px;
+            }
+            button {
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 20px;
+              width: 175px;
+              height: 60px;
+            }
+          }
+        }
+        .aboutRight {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .aboutItem {
+            width: 80%;
+            margin-top: 32px;
+            padding: 35px 40px;
+            h3 {
+              font-weight: 700;
+              font-size: 24px;
+              line-height: 29px;
+              width: 452px;
+            }
+            p {
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 32px;
+              width: 450px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about {
+    .container {
+      .aboutContent {
+        .aboutRight {
+          display: block;
+          .aboutItem {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .about {
+    margin-top: 35px;
+    .container {
+      min-height: 1697px;
+      .aboutContent {
+        margin-top: 60px;
+        .aboutBlock {
+          background: url('../img/about-img-768.png') 100% 100% no-repeat;
+          background-size: cover;
+          min-height: 650px;
+          .aboutBot {
+            p {
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 32px;
+              width: 366px;
+            }
+            button {
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 20px;
+              width: 175px;
+              height: 60px;
+            }
+          }
+        }
+        .aboutRight {
+          .aboutItem {
+            height: 235px;
+            img {
+              width: 114px;
+              height: 99px;
+            }
+            div {
+              h3 {
+                font-size: 24px;
+                line-height: 29px;
+                width: 452px;
+              }
+              p {
+                font-size: 16px;
+                line-height: 32px;
+                width: 450px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .about {
+    margin-top: 35px;
+    .container {
+      min-height: 1697px;
+      .aboutContent {
+        margin-top: 60px;
+        .aboutBlock {
+          background: url('../img/about-img-768.png') 100% 100% no-repeat;
+          background-size: cover;
+          min-height: 650px;
+          .aboutBot {
+            p {
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 32px;
+              width: 366px;
+            }
+            button {
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 20px;
+              width: 175px;
+              height: 60px;
+            }
+          }
+        }
+        .aboutRight {
+          .aboutItem {
+            height: 235px;
+            img {
+              width: 64px;
+              height: 49px;
+            }
+            div {
+              h3 {
+                width: 90%;
+              }
+              p {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 28px;
+                width: 90%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about {
+    margin-top: 60px;
+    .container {
+      min-height: auto;
+      height: auto;
+      .aboutTitle {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+      }
+      .aboutText {
+        font-size: 14px;
+        line-height: 28px;
+      }
+      .aboutContent {
+        margin-top: 14px;
+        display: block;
+        .mobileText {
+          margin-top: 14px;
+          display: block;
+          p {
+            font-size: 14px;
+            line-height: 28px;
+          }
+          button {
+            width: 162px;
+            height: 39px;
+            border: 2px solid #ff9900;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ff9900;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            background: none;
+          }
+        }
+        .aboutRight {
+          .aboutItem {
+            height: auto;
+            display: block;
+            border: none;
+            padding: 0;
+            img {
+              width: 64px;
+              height: 49px;
+            }
+            div {
+              h3 {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 22px;
+                width: 100%;
+              }
+              p {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 28px;
+                width: 100%;
+              }
+            }
+          }
+        }
+        .aboutBlock {
+          background: url('../img/about-img-320.png') 100% 100% no-repeat;
+          background-position: top;
+          background-size: cover;
+          min-height: 200px;
+          .aboutBot {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
